@@ -4,11 +4,7 @@ import getSongsByTitle from "@/actions/getSongsByTitle";
 
 export const revalidate = 0;
 
-type SearchParams = {
-  title?: string;
-};
-
-export default async function SearchPage({ searchParams }: { searchParams: SearchParams }) {
+export default async function SearchPage({ searchParams }: { searchParams: any }) {
   const title = searchParams?.title ?? "";
   const songs = await getSongsByTitle(title);
 
