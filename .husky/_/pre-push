@@ -1,8 +1,2 @@
-branch="$(git symbolic-ref --short HEAD)"
-
-if [ "$branch" = "main" ]; then
-  echo "Direct pushes to 'main' are not allowed. Please use a Pull Request."
-  exit 1
-fi
-
-npm run lint && npm run type-check
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
