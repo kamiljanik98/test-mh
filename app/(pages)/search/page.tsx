@@ -2,12 +2,10 @@ import SearchInput from "@/components/SearchInput";
 import SearchContent from "@/components/SearchContent";
 import getSongsByTitle from "@/actions/getSongsByTitle";
 
-interface Props {
-  searchParams?: { title?: string };
-}
+type SearchParams = { title?: string };
 
-export default async function SearchPage({ searchParams }: Props) {
-  const title = searchParams?.title ?? "";
+export default async function SearchPage({ searchParams }: { searchParams: SearchParams }) {
+  const title = searchParams.title ?? "";
   const songs = await getSongsByTitle(title);
 
   return (
