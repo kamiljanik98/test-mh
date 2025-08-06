@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html,
+body,
+:root {
+  color-scheme: dark;
+  height: 100%;
+  background-color: #050505;
+  overflow-x: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff transparent; /* thumb white, transparent track */
+}
